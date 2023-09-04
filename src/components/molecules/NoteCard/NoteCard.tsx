@@ -3,14 +3,15 @@ import NoteDisplay from "../../atoms/NoteCard/NoteDisplay";
 import "./NoteCard.css";
 interface NoteCardProps {
   value: string;
+  onRemove: (note: string) => void;
 }
 
-const NoteCard = ({ value }: NoteCardProps) => {
+const NoteCard = ({ value, onRemove }: NoteCardProps) => {
   return (
     <>
       <div className="note-card">
         <NoteDisplay value={value} />
-        <DoneButton />
+        <DoneButton onDone={()=> onRemove(value)}/>
       </div>
     </>
   );

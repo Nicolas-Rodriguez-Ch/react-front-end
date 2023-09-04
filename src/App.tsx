@@ -8,12 +8,15 @@ function App() {
   const addNote = (note: string) => {
     setNotes((prevNotes) => [...prevNotes, note]);
   };
+  const removeNote = (noteToRemove: string) => {
+    setNotes(prevNotes => prevNotes.filter(note => note !== noteToRemove))
+  }
   return (
     <div className="main-app">
       <NewNoteForm onAddNote={addNote} />
       <div className="notes-list">
         {notes.map((note) => (
-          <NoteCard key={note} value={note}/>
+          <NoteCard key={note} value={note} onRemove={removeNote}/>
         ))}
       </div>
     </div>
