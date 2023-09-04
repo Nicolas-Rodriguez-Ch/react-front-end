@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import NewNoteForm from "./components/molecules/NewNoteForm/NewNoteForm";
+import NoteCard from "./components/molecules/NoteCard/NoteCard";
 
 function App() {
   const [notes, setNotes] = useState<string[]>([]);
@@ -8,13 +9,11 @@ function App() {
     setNotes((prevNotes) => [...prevNotes, note]);
   };
   return (
-    <div>
+    <div className="main-app">
       <NewNoteForm onAddNote={addNote} />
       <div className="notes-list">
-        {notes.map((note, index) => (
-          <div key={index} className="note-item">
-            {note}
-          </div>
+        {notes.map((note) => (
+          <NoteCard key={note} value={note}/>
         ))}
       </div>
     </div>

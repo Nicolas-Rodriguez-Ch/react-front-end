@@ -4,3 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
+.main-app {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
