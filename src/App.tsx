@@ -1,14 +1,12 @@
-import './App.css'
+import "./App.css";
+import SubmitButton from "./components/SubmitButton/SubmitButton";
 
 function App() {
-
   return (
     <>
-      <div>
-        <h1>Hola mundo</h1>
-      </div>
+      <SubmitButton />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

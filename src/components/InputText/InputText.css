@@ -1,0 +1,18 @@
+.input-text {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  /* border: 1px black solid;
+  background-color: lightgray; */
+}
+.input-text__label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.input-text__field {
+  padding: 10px;
+  margin: 10px;
+}
